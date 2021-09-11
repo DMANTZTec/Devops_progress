@@ -1,0 +1,33 @@
+(inside server or location block in /etc/nginx.nginx.conf)
+#Base url 
+location /base_url {
+		return 200 "This is base url";
+}
+
+#redirect the url, here url is changed
+location /url_change {
+		return 301 /base_url ;
+}
+
+
+
+
+--------------------------------------------------------------------
+
+
+
+#rewrite the user, ir also re-evaluate the complete configuration
+rewrite ^/user/(\w+) /great;
+
+#rewrite the user,$1 is the first word after greet
+#rewrite ^/user/(\w+) /greet/$1;
+
+
+#rewritten even the /user/joel is used, giving the same response
+location /greet {
+   return 200 "hello user";
+}
+location = /greet/joel {
+ return 200 "hello joel";
+ }
+}

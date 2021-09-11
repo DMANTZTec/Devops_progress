@@ -1,0 +1,75 @@
+#!/bin/bash
+
+#program to find if file exists in the directory or not
+
+echo "enter file name"
+read file_name
+if [-f $file_name]
+then
+echo "$file_name exists"
+else
+echo "$file_name doesn't exist"
+fi
+
+---------------------------------------------------------------
+
+if[$ssc -ge 70 -o $inter -ge 60]
+## if[$ssc -ge 70] || [$inter -ge 60] ##
+
+if[$ssc -ge 70 -a $inter -ge 60]
+## if[$ssc -ge 70] & [$inter -ge 60] ##
+
+
+------------------------------------------------------------------
+
+echo "enter 1st number"
+read num1
+echo "enter 2nd number"
+read num2
+
+-------------------------------------------------------------------
+
+echo "addition:" $((num1+num2))
+echo "subtraction:" $((num1-num2))
+echo "multiplication:" $((num1*num2))
+echo "division:" $((num1/num2))
+echo "scale=2;$num1/num2"|bc  ##for floating numbers
+
+
+--------------------------------------------------------------------
+
+
+##for loop syntax
+
+for i values;do
+condtion;
+done
+
+
+for i in 1 2 3 4 5;do  ##for i in {1:5}
+echo "Number $i"
+done
+
+for ((i=0,i<10,i++));do
+echo"number$i"
+done
+
+#to know file sizes of all files
+for i in *.pdf;do
+size=$(du -h "$i")
+echo "File:$size"
+
+-----------------------------------------------------------------------------
+#while loop
+
+while command
+do
+   statement to be executed if command is true
+done
+
+num=0
+while [$num -lt 10]
+do
+echo $num
+num=`expr $num + 1`
+done
