@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "please enter the github link to clone:"
+read applink
+mkdir NewApp
+cd NewApp
+git clone $applink
+echo "Github link has been successfully cloned"
+cd $(ls -d */|head -n 1)
+command -v nvm
+node -v
+npm install
+npm install -g @angular/cli
+ng build --prod
+cp -R dist /home/ec2-user
+sed -i '/root/c\       root    /home/ec2-user/dist' /etc/nginx/nginx.conf
+systemctl start nginx

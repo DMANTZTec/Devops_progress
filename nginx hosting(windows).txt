@@ -1,0 +1,24 @@
+angular app used for deployment
+https://github.com/gothinkster/angular-realworld-example-app
+
+videos followed for nginx angular app deployment
+https://www.youtube.com/watch?v=Yd-sZrP97ew 
+https://www.youtube.com/watch?v=KtQeNAArImc
+
+
+
+installed nodejs
+
+used cmd to build prod binaries for angular app
+
+ng build --prod   (got some error when executed the command)
+
+for handling error in cmd 
+https://www.youtube.com/watch?v=hHEzDtwtuI8
+(-npm install     -npm install -g @angular/cli)
+
+ng serve -o ==> it will directly deploy angular app on localhost
+
+used filezilla to copy dist file to ec2 instance
+
+gave to path of dist file to root in nginx.conf file

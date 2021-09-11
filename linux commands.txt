@@ -1,0 +1,161 @@
+++++++++++++++++++++++++++DIRECTORY COMMANDS++++++++++++++++++++++++++++
+
+pwd = print working directory => display location of current directory
+
+mkdir = make directory
+
+rmdir = remove directory
+
+ls = list out contents
+ls -a , ls -al, ls - A, ls - lrt
+
+cd - change directory
+
+touch - create empty file
+
+cat - to create a file,display content of file,copy content from one file to other
+
+rm - remove a file
+
+cp - copy a file or directory
+
+mv - move  file or directory
+
+rename - useful for renaming large group of files
+
+head - display the first few lines(10) of a file
+
+tail - display the last lines (10) of a file
+
+tac - its opposite of cat..it displays the content of a file in the reverse order
+
+more - same as cat but for large files
+
+su - for admin role
+
+id - to display uid and gid
+
+useradd - to add an user into linux server
+
++++++++++++++++++++++++++LINUX FILTER COMMANDS+++++++++++++++++++++++++++++++
+
+cut - to select a coulumn in a file(-d = delimiter for characters like :;,- etc and -f acts as column seperator)
+
+grep => global regular expression print - to search for the contents of the file
+
+comm - to compare two files
+
+tee - to copy data...eg: cat marks.txt | tee new.txt |cat
+
+tr - to convert from lower to upper case..eg: cat marks.txt | tr 'anf' 'ANF'
+
+uniq - to sort out the unique words .. eg: sort marks.txt | uniq
+
+wc - count the no of lines,words, characters in a file
+
+od - -b = display content in octal 
+     -c = hexadecimal
+     -tx1 = ascii
+
+sort - display content in alphabetical order
+
+gzip - to compress
+
+gunzip - to decompress
+
+++++++++++++++++++++++++++LINUX UTILITY COMMANDS+++++++++++++++++++++++++
+
+find - to search for a file 
+
+locate - to search for a file by its name in entire database but not just file system
+
+date - to get date,time,time zone
+
+cal - to get calendar
+
+sleep - to hold terminal for defined amount of imte basically in seconds
+
+time - to get the time taken to execute a acommand
+
+zcat - to diplay the compressed file
+
+df - to show the disk space used up in the file system
+
+mount - to mount an external device
+
+++++++++++++++++++++++++++LINUX administration COMMANDS++++++++++++++++++++++++
+
+uptime - for how much time the machine has been running
+
+users - how many users are currently logged in
+
+service - to start , check status etc of a process
+
+pkill - to kill a service
+
+pmap - to get the memory map of a process
+
+free - memory status
+
+top - processes activity
+
+last - last user activity
+
+ps - display processes running in system
+
+info - to get information about argumants of an unknown command
+
+env - environment variable
+
+netstat - network status
+
+arp - ethernet connectivity & ip address
+
+df - disk space used up in the file system
+
+du - Disk Usage (in kilobytes)
+
+wget - to download web content
+
+init - initializes and controls processes(it is very process when machine starts and lasts untill machine shutdowns)
+
+nano - text editor
+
+nslookup - domain name and ip info
+
+shred -u = delete a file by overwriting its content
+
+pwd>  = print path of current working directory
+
+chown - change the ownership of file
+
+>alias - to shorten a path and remember as a variable does
+
+echo - display text
+
+cmp - compate two file byte by byte
+
+ifconfig - configuration
+
+traceroute> = trace existing network
+
+route - list routing table for server
+
+ping - check connectivity
+
+who - same as w but doesnt show current process
+
+ls - list of files
+
+tar - compress directories
+
+grep - search for a string in a file
+
+su - switch from one user to other
+
+awk - search lines for a given pattern
+
+shutdown <time> ==> in minutes
+shutdown -r<time>
+shutdown -c ==> cancel the shutdown
+shutdown -k<time> ==> fake shutdown warning

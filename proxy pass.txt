@@ -1,0 +1,8 @@
+}
+        location /l2instance/ {
+             proxy_pass http://172.31.16.65:80/;
+
+        }
+        location /l3instance/ {
+                proxy_pass http://172.31.28.84:80/;
+        }
